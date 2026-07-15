@@ -3,7 +3,7 @@
 // This is the ENTIRE client side of the client-server architecture.
 // It talks to the FastAPI server over plain HTTP -- nothing more.
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000/api";
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 const ingestForm = document.getElementById("ingest-form");
 const urlInput = document.getElementById("url-input");
