@@ -5,10 +5,6 @@ Every tunable setting for the whole system lives here, in one place.
 """
 
 import os
-from dotenv import load_dotenv
-
-load_dotenv()  # reads a local .env file if present
-
 # --- LLM (Claude) ---------------------------------------------------------
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 LLM_MODEL = "claude-sonnet-4-6"

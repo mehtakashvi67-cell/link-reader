@@ -15,8 +15,11 @@ and you've pulled a model: `ollama pull llama3.2`
 
 import requests
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama3.2"
+# OLLAMA_URL = "http://localhost:11434/api/generate"
+# OLLAMA_URL = "https://troglodytic-uninceptively-louetta.ngrok-free.dev/api/generate"
+OLLAMA_URL = "https://entail-antiviral-camping.ngrok-free.dev/api/generate"
+# OLLAMA_MODEL = "qwen2.5:1.5b"
+OLLAMA_MODEL = "llama3.2:latest"
 
 SYSTEM_PROMPT = """You are a precise research assistant. You answer questions using ONLY the
 provided context chunks, which were retrieved from a webpage via semantic search.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link Reader — ask questions about any page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BM83bjbo.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DdsxXmCd.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">📎</span>
+    <span class="brand-name">Link Reader</span>
+  </div>
+  <p class="tagline">Paste a link. Ask it anything. Get a plain-language answer.</p>
+</header>
+
+<main class="layout">
+
+  <!-- ---- STEP 1: ADD A LINK ---- -->
+  <section class="panel add-panel">
+    <div class="panel-head">
+      <span class="step-bubble">1</span>
+      <div>
+        <h2 class="panel-title">Add something to read</h2>
+        <p class="panel-sub">Drop in a link and we'll read the whole page for you.</p>
+      </div>
+    </div>
+
+    <form id="ingest-form" class="ingest-form">
+      <input id="url-input" type="url" placeholder="Paste a link, e.g. https://example.com/article" required>
+      <button type="submit" id="ingest-btn">Add link</button>
+    </form>
+
+    <div id="ingest-status" class="status-line" role="status" aria-live="polite"></div>
+
+    <div class="sources-block">
+      <h3 class="mini-title">What you've added</h3>
+      <ul id="sources-list" class="sources-list">
+        <li class="empty-hint">Nothing here yet — paste a link above to get started.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ---- STEP 2: ASK ---- -->
+  <section class="panel ask-panel">
+    <div class="panel-head">
+      <span class="step-bubble">2</span>
+      <div>
+        <h2 class="panel-title">Ask a question, or get a summary</h2>
+        <p class="panel-sub">We'll only answer using what's actually in the page — no guessing.</p>
+      </div>
+    </div>
+
+    <form id="query-form" class="query-form">
+      <select id="source-select" aria-label="Which page to ask about">
+        <option value="">Look through everything I've added</option>
+      </select>
+      <div class="query-row">
+        <input id="question-input" type="text" placeholder="Ask something, like “what's the main point?”" required>
+        <button type="submit" id="query-btn">Ask</button>
+      </div>
+    </form>
+
+    <div id="answer-block" class="answer-block hidden">
+      <h3 class="mini-title">Answer</h3>
+      <p id="answer-text"></p>
+    </div>
+
+    <div class="retrieval-block">
+      <h3 class="mini-title">Where this came from</h3>
+      <div id="retrieval-list" class="retrieval-list">
+        <p class="empty-hint">Ask a question above and we'll show exactly which parts of the page we used.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Everything runs on your own computer — nothing is sent anywhere else.</span>
+</footer>
+
+</body>
+</html>
