@@ -6,4 +6,4 @@ __pycache__/
 data/
 node_modules/
 package-lock.json
-dist/
+
